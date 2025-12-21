@@ -34,4 +34,4 @@ management:
         include: "*"
 
 # Propriété demandée dans le sujet : nombre de jours pour les dernières commandes
-mes-config-ms-commandes-last: 10
+mes-config-ms-commandes-last: 5
