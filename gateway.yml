@@ -8,14 +8,22 @@ spring:
           uri: lb://produits-service
           predicates:
             - Path=/produits/**
+          filters:
+            - StripPrefix=1  # <-- IMPORTANT !
+        
         - id: commandes-service
           uri: lb://commandes-service
           predicates:
             - Path=/commandes/**
+          filters:
+            - StripPrefix=1  # <-- IMPORTANT !
+        
         - id: interface-service
           uri: lb://interface-service
           predicates:
             - Path=/front/**
+          filters:
+            - StripPrefix=1  # <-- IMPORTANT !
 
 server:
   port: 8080
