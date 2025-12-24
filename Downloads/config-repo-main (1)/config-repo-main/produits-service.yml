@@ -28,5 +28,3 @@ management:
     web:
       exposure:
         include: health,info
-
-# Configuration MySQL pour produits-service
